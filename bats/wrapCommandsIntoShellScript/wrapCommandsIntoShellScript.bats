@@ -23,8 +23,10 @@ function setup {
   [ -e "$TEST_FILE" ]
   #assert file content
   run cat "$TEST_FILE"
+  echo "generated file content:" >&3
+  cat "$TEST_FILE" >&3
   [ "${lines[0]}" = '#!/bin/bash' ]
-  [ "${lines[1]}" = 'echo "This is test";echo this is only tests Script;echo timestamp is $TIMESTAMP' ]
+  [ "${lines[1]}" = "echo \"This is test\";echo this is only tests Script;echo timestamp is $TIMESTAMP" ]
 }
 
 function teardown {
