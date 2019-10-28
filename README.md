@@ -6,3 +6,7 @@ https://zxq9.com/archives/795
 
 #Conditions in bash for files and strings
 https://wiki.bash-hackers.org/commands/classictest
+
+
+#Bash scripting cheatsheet
+https://devhints.io/bash
