@@ -10,3 +10,6 @@ https://wiki.bash-hackers.org/commands/classictest
 
 #Bash scripting cheatsheet
 https://devhints.io/bash
+
+#Sed tips
+http://www.pement.org/sed/sed1line.txt
