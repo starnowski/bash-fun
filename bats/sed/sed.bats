@@ -24,6 +24,23 @@ function setup {
     [ "${lines[1]}" == "usernickname=Simon" ]
 }
 
+@test "the 'prop2.properties' test file should have correct data" {
+    # given
+    [ -e "$BATS_TEST_DIRNAME/test_files/prop2.properties" ]
+
+    # when
+    run cat "$BATS_TEST_DIRNAME/test_files/prop2.properties"
+
+    # then
+    echo "output:->" >&3
+    echo "$output" >&3
+    echo "<-output:" >&3
+    [ "$status" -eq 0 ]
+    [ "${lines[0]}" == "username = Szymon" ]
+    [ "${lines[1]}" == 'regions    =      ap-southeast-1   , us-west-2 ###' ]
+    [ "${lines[2]}" == 'ec2_states  = pending' ]
+}
+
 @test "should replace first line" {
     # given
     cp "$BATS_TEST_DIRNAME/test_files/prop1.properties" $BATS_TMPDIR/$TIMESTAMP
@@ -44,6 +61,8 @@ function setup {
     [ "${lines[0]}" == "username=Dawid" ]
     [ "${lines[1]}" == "usernickname=Simon" ]
 }
+
+
 
 function teardown {
     rm -rf $BATS_TMPDIR/$TIMESTAMP
