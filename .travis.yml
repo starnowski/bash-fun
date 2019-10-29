@@ -1,0 +1,10 @@
+#
+# https://docs.travis-ci.com/user/languages/python/ - Building a Python Project in Travis CI
+#
+name: "bash fun"
+language: bash
+before_install:
+# Install bats-core with version 1.1.0 when package will be available (see https://github.com/bats-core/bats-core/issues/103)
+  - .travis/bats/bats-core-installation.sh "$TRAVIS_BUILD_DIR/.travis/bats"
+# command to run tests
+script: export PATH="$TRAVIS_BUILD_DIR/.travis/bats/bats-core/bin:$PATH" && bats -rt bats/
