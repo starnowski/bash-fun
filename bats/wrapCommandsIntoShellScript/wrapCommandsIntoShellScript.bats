@@ -36,7 +36,7 @@ function setup {
   [ -e "$TEST_FILE" ]
   chmod +x "$TEST_FILE"
   export TMP_VALUE="XXX_$TIMESTAMP"
-  run "$TEST_FILE" >&3
+  run "$TEST_FILE"
   [ "${lines[0]}" = 'This is test' ]
   [ "${lines[1]}" = "this is only tests Script" ]
   [ "${lines[2]}" = "timestamp is $TIMESTAMP" ]
