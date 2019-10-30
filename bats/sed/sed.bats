@@ -69,7 +69,6 @@ function setup {
 
     # when
     run sed -i -E "s/^regions(\\s*)=(\\s*)ap-southeast-1(.*)/regions\1=\2eu-west-1\3/" "$BATS_TMPDIR/$TIMESTAMP/prop2.properties"
-    run sed -i -E "s/(<username>.+)name(.+<\/username>)/\1something\2/" "$BATS_TMPDIR/$TIMESTAMP/prop2.properties"
 
     # then
     echo "output:->" >&3
