@@ -5,9 +5,9 @@
 read -r -p "Are you sure? [y/N] " response
 case "$response" in
     [yY][eE][sS]|[yY])
-        do_something
+        echo "The response was positive: $response"
         ;;
     *)
-        do_something_else
+        echo "The response was negative: $response"
         ;;
 esac
