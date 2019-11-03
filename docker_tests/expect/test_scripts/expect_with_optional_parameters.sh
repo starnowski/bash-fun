@@ -8,6 +8,7 @@ set options {
     {c          "do not create non-existent files"}
     {r.arg  ""  "use time from ref_file"}
     {t.arg  -1  "use specified time"}
+    {longOption.arg  "someDefaultValue"  "use string value"}
 }
 set usage ": MyCommandName \[options] filename ...\noptions:"
 array set params [::cmdline::getoptions argv $options $usage]
