@@ -15,3 +15,7 @@ https://devhints.io/bash
 
 #Sed tips
 http://www.pement.org/sed/sed1line.txt
+
+# Expect tool
+https://linux.die.net/man/1/expect
+https://www.geeksforgeeks.org/expect-command-in-linux-with-examples/
