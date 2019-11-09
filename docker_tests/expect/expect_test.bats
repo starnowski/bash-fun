@@ -52,11 +52,11 @@ function setup {
     echo "<--:output" >&3
     [ "$status" -eq "0" ]
     [[ "${lines[0]}" =~ "Parameter 'a' was passed" ]]
-    [[ "${lines[0]}" =~ "Parameter 'b' was not passed" ]]
-    [[ "${lines[0]}" =~ "Parameter 'r' was passed with value 33" ]]
-    [[ "${lines[0]}" =~ "Parameter 'q' was not passed" ]]
-    [[ "${lines[0]}" =~ "Parameter 'longOption' was passed with value passed_value_${TIMESTAMP}" ]]
-    [[ "${lines[0]}" =~ "Parameter 'longOption2' was not passed" ]]
+    [[ "${lines[1]}" =~ "Parameter 'b' was not passed" ]]
+    [[ "${lines[2]}" =~ "Parameter 'r' was passed with value 33" ]]
+    [[ "${lines[3]}" =~ "Parameter 'q' was not passed" ]]
+    [[ "${lines[4]}" =~ "Parameter 'longOption' was passed with value passed_value_${TIMESTAMP}" ]]
+    [[ "${lines[5]}" =~ "Parameter 'longOption2' was not passed" ]]
 }
 
 function teardown {
