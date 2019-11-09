@@ -30,3 +30,13 @@ if {  $params(b) } {
 } else {
     puts "Parameter 'b' was not passed"
 }
+if {  $params(r) } {
+    puts "Parameter 'r' was passed with value $params(r)"
+} else {
+    puts "Parameter 'r' was not passed"
+}
+if {  $params(q) } {
+    puts "Parameter 'q' has value $params(q)"
+} else {
+    puts "Parameter 'q' was not passed"
+}
