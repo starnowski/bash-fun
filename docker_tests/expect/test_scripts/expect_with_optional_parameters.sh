@@ -40,3 +40,13 @@ if {  $params(q) } {
 } else {
     puts "Parameter 'q' was not passed"
 }
+if {  $params(longOption) != "" } {
+    puts "Parameter 'longOption' has value $params(longOption)"
+} else {
+    puts "Parameter 'longOption' was not passed"
+}
+if {  $params(longOption2) != "" } {
+    puts "Parameter 'longOption2' has value $params(longOption2)"
+} else {
+    puts "Parameter 'longOption2' was not passed"
+}
